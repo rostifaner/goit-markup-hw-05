@@ -507,7 +507,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
           <svg class="close-btn-svg" width="8" height="8">
@@ -560,17 +560,37 @@
               </svg>
             </div>
           </div>
-          <label for="label-area">Comment</label>
-          <textarea
-            class="area-text"
-            name="modal-area"
-            id="modal-area"
-            placeholder="Text input"
-          ></textarea>
-          <input class="input-check" name="input-check" type="checkbox" />
-          <label for="input-check"
-            >I accept the terms and conditions of the Privacy Policy</label
-          >
+          <div class="modal-field">
+            <label for="label-area">Comment</label>
+            <textarea
+              class="area-text"
+              name="modal-area"
+              id="modal-area"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="modal-check">
+            <input
+              class="input-check visually-hidden"
+              name="input-check"
+              type="checkbox"
+              id="input-check"
+            />
+            <label class="label-check" for="input-check"
+              ><span class="check">
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#click"></use>
+                </svg> </span
+              >I accept the terms and conditions of the<a
+                class="policy"
+                href="#"
+                >Privacy Policy</a
+              >
+            </label>
+          </div>
+          <div class="send-wrap">
+            <button class="send-btn" type="submit">Send</button>
+          </div>
         </form>
       </div>
     </div>
