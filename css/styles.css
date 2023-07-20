@@ -755,7 +755,7 @@ body {
   align-items: center;
 }
 
-.label-check span {
+.check {
   width: 16px;
   height: 16px;
   border-radius: 2px;
