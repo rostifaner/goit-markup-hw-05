@@ -536,11 +536,12 @@ body {
   background-color: #31d0aa;
 }
 
-.footer-form {
+.form {
   display: flex;
+  gap: 24px;
 }
 
-.form p {
+.footer-cap {
   color: var(--white);
   font-size: 16px;
   font-weight: 500;
@@ -550,20 +551,18 @@ body {
 }
 
 .footer-form-input {
-  min-width: 264px;
+  width: 264px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
   outline: transparent;
   padding-left: 16px;
-  margin-right: 24px;
   color: var(--white);
   font-size: 12px;
-  font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-form-input::placeholder {
@@ -574,22 +573,27 @@ body {
   letter-spacing: 0.04em;
 }
 
-.footer-btn {
-  display: flex;
-  gap: 16px;
-}
-
 .form-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
   border-radius: 4px;
-  background: var(--primary-state);
+  background-color: var(--primary-state);
   color: var(--white);
   border: none;
-  padding: 8px 24px;
+  /* padding: 8px 24px; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sub-icon {
+  margin-left: 16px;
 }
 
 .form-btn:is(:hover, :focus) {
@@ -667,23 +671,25 @@ body {
   margin-bottom: 16px;
 }
 
-.modal-field label {
+.modal-name {
   display: block;
   color: var(--lightslate);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
-.modal-field input {
+.modal-name-input {
   width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 0 10px 0 38px;
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-wrap input:focus {
@@ -694,8 +700,12 @@ body {
   fill: var(--primary-state);
 }
 
-.modal-field {
+.modal-field-text {
   margin-bottom: 8px;
+}
+
+.modal-field {
+  margin-bottom: 16px;
 }
 
 .input-wrap {
@@ -707,25 +717,32 @@ body {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .area-text {
+  color: rgba(46, 47, 66, 0.4);
   width: 100%;
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
+  background-color: transparent;
   resize: none;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-bottom: 16px;
   padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .area-text:focus {
   border-color: var(--primary-state);
+}
+
+.modal-check {
+  margin-bottom: 24px;
 }
 
 .label-check {
@@ -744,16 +761,19 @@ body {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-check:checked + .label-check span {
-  background-color: var(--primary-state);
+  background-color: var(--secondary-state);
   border: none;
-  fill: var(--white);
+  fill: var(--cloud);
 }
 
 .policy {
@@ -761,12 +781,12 @@ body {
 }
 
 .send-btn {
-  margin-top: 24px;
-  width: 169px;
+  display: block;
+  min-width: 169px;
   height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
-  background: var(--primary-state);
+  background-color: var(--primary-state);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
   color: var(--white, #fff);
@@ -774,9 +794,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-}
-
-.send-wrap {
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
